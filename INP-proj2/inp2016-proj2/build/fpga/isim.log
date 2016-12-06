@@ -1,0 +1,88 @@
+ISim log file
+Running: C:\FitkitSVN\apps\inp\inp2016-proj2\build\fpga\inp_isim.exe -intstyle ise -gui -tclbatch inp_isim.tcl 
+ISim P.20131013 (signature 0x8ef4fb42)
+----------------------------------------------------------------------
+INFO:Security:60 - The XILINXD_LICENSE_FILE environment variable is set to '2100@semik.fit.vutbr.cz'.
+INFO:Security:62 - The LM_LICENSE_FILE environment variable is set to '1717@semik.fit.vutbr.cz'.
+INFO:Security:68 - For more information or for assistance in obtaining 
+ a license, please run the Xilinx License Configuration Manager
+       (xlcm or "Manage Xilinx Licenses".)
+INFO:Security:68a - user is Fitkit, on host FITKIT-PC.
+ERROR:Security:14 - No feature was available for 'ISIM'.
+
+License server machine is down or not responding.
+ See the system adminstrator about starting the license server system, or
+ make sure you're referring to the right host (see LM_LICENSE_FILE).
+Feature:       ISIM
+Hostname:      147.229.12.27
+License path:  2100@semik.fit.vutbr.cz;1717@semik.fit.vutbr.cz;C:/.Xilinx\Xilinx.lic;
+FLEXnet Licensing error:-96,491
+For further information, refer to the FLEXnet Licensing documentation,
+available at "www.flexerasoftware.com".
+----------------------------------------------------------------------
+WARNING: A full ISim License cannot be checked out due to the issues listed above. Please use Xilinx License Configuration Manager to fix these issues in order to check out a full ISim license.
+WARNING: ISim will run in Lite mode. Please refer to the ISim documentation for more information on the differences between the Lite and the Full version.
+This is a Lite version of ISim.
+Time resolution is 1 ps
+# onerror resume
+# puts ==========================================================
+Initialize simulation
+==========================================================
+type isim_restart to restart simulation
+# set FIRSTRUN 1
+# proc add_divider TEXT 
+    divider add "$TEXT"
+   
+# proc add_wave_label  FLAGS LABEL NAME  
+      set cmd "wave add $FLAGS"
+      if { $LABEL != "" } {
+         append cmd " -name \"$LABEL\""
+      }
+      append cmd " $NAME"
+      if {[catch {eval $cmd } stderr] != 0} {
+         puts "  WARNING : Signal $NAME doesn't exist"
+      }
+   
+# proc add_wave FLAGS NAME 
+    add_wave_label "$FLAGS" "" "$NAME"
+   
+# proc isim_restart  
+      global FIRSTRUN
+      #set TESTBENCH_SCRIPT "C:/FitkitSVN/apps/inp/inp2016-proj2/build/fpga/../../fpga/sim/isim.tcl"
+      if {$FIRSTRUN == 0} { wcfg new }
+      set FIRSTRUN 0
+      #puts "../../fpga/sim/isim.tcl" 
+      #puts [pwd]
+      if {[catch {source "../../fpga/sim/isim.tcl"}]} { 
+         puts "isim source failed"
+         flush stdout
+      } else {
+         puts "isim found, tb entity: testbench"
+         flush stdout
+         if {[catch {isim_script} stderr] != 0} {
+            puts "ERROR: $stderr"
+         }
+      } 
+   
+# isim_restart
+Simulator is doing circuit initialization process.
+at 0 ps, Instance /testbench/uut/fpga_inst/bfcpu/ : Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+Finished circuit initialization process.
+at 0 ps, Instance /testbench/lcd/ : Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+at 77257800 ps(6): Note: LCD: Set Function (/testbench/lcd/).
+at 228457800 ps(6): Note: LCD: Clear Display (/testbench/lcd/).
+at 379657800 ps(6): Note: LCD: Cursor Home (/testbench/lcd/).
+at 530857800 ps(6): Note: LCD: Display on/off Control (/testbench/lcd/).
+at 682057800 ps(6): Note: LCD: Entry Mode Set (/testbench/lcd/).
+at 833257800 ps(6): Note: LCD: CGRAM Address Setting (/testbench/lcd/).
+at 1135657800 ps(6): Note: LCD: CGRAM Address Setting (/testbench/lcd/).
+at 1438057800 ps(6): Note: LCD: CGRAM Address Setting (/testbench/lcd/).
+at 1740457800 ps(6): Note: LCD: CGRAM Address Setting (/testbench/lcd/).
+at 2042857800 ps(6): Note: LCD: CGRAM Address Setting (/testbench/lcd/).
+at 2345257800 ps(6): Note: LCD: CGRAM Address Setting (/testbench/lcd/).
+at 2647657800 ps(6): Note: LCD: CGRAM Address Setting (/testbench/lcd/).
+at 2950057800 ps(6): Note: LCD: CGRAM Address Setting (/testbench/lcd/).
+at 3252495600 ps(6): Note: LCD: DDRAM Address Setting (/testbench/lcd/).
+at 3554933400 ps(6): Note: LCD: DDRAM Address Setting (/testbench/lcd/).
+at 3857371200 ps(6): Note: LCD: DDRAM Address Setting (/testbench/lcd/).
+at 4159809 ns(6): Note: LCD: DDRAM Address Setting (/testbench/lcd/).

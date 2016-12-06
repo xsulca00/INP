@@ -1,0 +1,71 @@
+Running: C:\Xilinx\14.7\ISE_DS\ISE\bin\nt\unwrapped\fuse.exe -intstyle ise --timeprecision_vhdl 1ps -incremental -o inp_isim -prj inp_isim.prj testbench 
+ISim P.20131013 (signature 0x8ef4fb42)
+Number of CPUs detected in this system: 4
+Turning on mult-threading, number of parallel sub-compilation jobs: 8 
+Determining compilation order of HDL files
+Parsing VHDL file "../../../../../fpga/units/clkgen/clkgen_config.vhd" into library work
+Parsing VHDL file "inp_config.vhd" into library work
+Parsing VHDL file "../../../../../fpga/units/clkgen/clkgen.vhd" into library work
+Parsing VHDL file "../../../../../fpga/units/math/math_pack.vhd" into library work
+Parsing VHDL file "../../../../../fpga/ctrls/spi/spi_adc_entity.vhd" into library work
+Parsing VHDL file "../../../../../fpga/ctrls/spi/spi_adc.vhd" into library work
+Parsing VHDL file "../../../../../fpga/ctrls/spi/spi_adc_autoincr.vhd" into library work
+Parsing VHDL file "../../../../../fpga/ctrls/spi/spi_reg.vhd" into library work
+Parsing VHDL file "../../../../../fpga/ctrls/spi/spi_ctrl.vhd" into library work
+Parsing VHDL file "../../../../../fpga/chips/fpga_xc3s50.vhd" into library work
+Parsing VHDL file "../../../../../fpga/chips/architecture_bare/arch_bare_ifc.vhd" into library work
+Parsing VHDL file "../../../../../fpga/chips/architecture_bare/tlv_bare_ifc.vhd" into library work
+Parsing VHDL file "../../../../../fpga/ctrls/keyboard/keyboard_ctrl.vhd" into library work
+Parsing VHDL file "../../../../../fpga/ctrls/keyboard/keyboard_ctrl_high.vhd" into library work
+Parsing VHDL file "../../fpga/lcdctrl.vhd" into library work
+Parsing VHDL file "../../fpga/kbctrl.vhd" into library work
+Parsing VHDL file "../../fpga/ram.vhd" into library work
+Parsing VHDL file "../../fpga/rom.vhd" into library work
+Parsing VHDL file "../../fpga/cpu.vhd" into library work
+Parsing VHDL file "../../fpga/top.vhd" into library work
+Parsing VHDL file "../../../../../fpga/models/lcd/lcd.vhd" into library work
+Parsing VHDL file "../../fpga/sim/tb.vhd" into library work
+Parsing VHDL file "../../../../../fpga/models/keyboard/keyboard.vhd" into library work
+Parsing VHDL file "../../fpga/sim/tb.vhd" into library work
+Starting static elaboration
+Completed static elaboration
+Fuse Memory Usage: 130456 KB
+Fuse CPU Usage: 374 ms
+Compiling package standard
+Compiling package std_logic_1164
+Compiling package std_logic_arith
+Compiling package std_logic_unsigned
+Compiling package textio
+Compiling package std_logic_textio
+Compiling package numeric_std
+Compiling package clkgen_cfg
+Compiling package fpga_cfg
+Compiling package vcomponents
+Compiling package vital_timing
+Compiling package vital_primitives
+Compiling package vpkg
+Compiling architecture bufg_v of entity BUFG [bufg_default]
+Compiling architecture ibufg_v of entity IBUFG [\IBUFG("DONT_CARE","0",true,"DEF...]
+Compiling architecture dcm_clock_divide_by_2_v of entity dcm_clock_divide_by_2 [dcm_clock_divide_by_2_default]
+Compiling architecture dcm_maximum_period_check_v of entity dcm_maximum_period_check [\dcm_maximum_period_check("CLKIN...]
+Compiling architecture dcm_maximum_period_check_v of entity dcm_maximum_period_check [\dcm_maximum_period_check("PSCLK...]
+Compiling architecture dcm_clock_lost_v of entity dcm_clock_lost [dcm_clock_lost_default]
+Compiling architecture dcm_v of entity DCM [\DCM(2.0,7,25,false,135.634,"NON...]
+Compiling architecture behavioral of entity clkgen [\clkgen(dcm_25mhz,true)\]
+Compiling architecture arch_spi_ctrl2 of entity SPI_ctrl [spi_ctrl_default]
+Compiling architecture behavioral of entity cpu [cpu_default]
+Compiling architecture behavioral of entity rom [\rom("++++++++++++++++++++++++++...]
+Compiling architecture behavioral of entity ram [ram_default]
+Compiling architecture behavioral of entity lcd_controller [\lcd_controller(1000,true)\]
+Compiling architecture arch_keyboard of entity keyboard_controller [keyboard_controller_default]
+Compiling architecture behavioral of entity kb_controller [kb_controller_default]
+Compiling architecture main of entity tlv_bare_ifc [tlv_bare_ifc_default]
+Compiling architecture arch_bare_ifc of entity fpga [fpga_default]
+Compiling architecture behavioral of entity lcd [lcd_default]
+Compiling architecture behavioral of entity testbench
+Time Resolution for simulation is 1ps.
+Waiting for 14 sub-compilation(s) to finish...
+Compiled 50 VHDL Units
+Built simulation executable inp_isim.exe
+Fuse Memory Usage: 171016 KB
+Fuse CPU Usage: 828 ms
