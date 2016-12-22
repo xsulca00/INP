@@ -116,7 +116,7 @@ begin
    --  INIT => "+++[>+++[>+<-]<-]" & nul
      --  [1] Vypis textu ABCDEFGHIJKL na displej 
      -- INIT => "+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++.+.+.+.+.+.+.+.+.+.+.+." & nul
-       --  INIT => "+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++>+++++[<.+.->-]" & nul
+         INIT => "+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++>+++++[<.+.->-]" & nul
       
       -- [2] Vypis textu na displej 
      -- INIT => "++++++++++[>+++++++>+++>+++++<<<-]>+++.+++++.++.>>-----.+++++.--.+.++++.--------.<<++++++++++++++++++++++++++++++++.++.---.-----.>>+++++." & nul
@@ -127,7 +127,7 @@ begin
      
 
       -- [4] Vypis znaku stisknutych na klavesnici na displej (vypisuje se dokud neni stisknuta klavesa * nebo # (tzn. konec radku))
-       INIT => "+[->,[>+>+<<-] nacteni vstupu do bunky 1 kopirovani nactene hodnoty do bunky 2 a 3 +>---------- odecteni 10 od bunky 2 [>.<[-]<<+>>>[-]<  pokud byla hodnota bunky 2 rozdilna od 0 vypis na display znulovani bunky 2 znulovani bunky 3]<<]" & nul
+      -- INIT => "+[->,[>+>+<<-] nacteni vstupu do bunky 1 kopirovani nactene hodnoty do bunky 2 a 3 +>---------- odecteni 10 od bunky 2 [>.<[-]<<+>>>[-]<  pokud byla hodnota bunky 2 rozdilna od 0 vypis na display znulovani bunky 2 znulovani bunky 3]<<]" & nul
 
       -- [5] Vypis druhych mocnin od 0 do 10000
       -- ? INIT => "++++[>+++++<-]>[<+++++>-]+<+[    >[>+>+<<-]++>>[<<+>>-]>>>[-]++>[-]+    >>>+[[-]++++++>>>]<<<[[<++++++++<++>>-]+<.<[>----<-]<]    <<[>>>>>[>>>[-]+++++++++<[>-<-]+++++++++>[-[<->-]+[<<<]]<[>+<-]>]<<-]<<-][Outputs square numbers from 0 to 10000.Daniel B Cristofani (cristofdathevanetdotcom)http://www.hevanet.com/cristofd/brainfuck/]" & nul
